@@ -1,1 +1,21 @@
-<h1>Hello ello ello <%= Name %></h1>
+<%- include("partials/header.ejs") %>
+
+<h3 style="text-decoration: underline">Salutation <%= Name %></h3>
+
+<form action="/start" method="post" id="returnbutton">
+    <input type="submit" value="Return Home">
+</form>
+
+<div id="Form2">
+<form action="/newBlog" method="post">
+    <div class="sub">
+    <label for="Blog Title">Name of the Blog</label> <br>
+    <input type="bName" name="BlogName">    <br>
+    </div>
+    <textarea name="BlogContent" cols="100" rows="20"></textarea> <br>
+    <div class="sub">
+    <input type="submit" value="Add Blog">
+    </div>
+</form>
+</div>
+<%- include("partials/footer.ejs") %>

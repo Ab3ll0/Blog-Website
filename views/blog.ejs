@@ -1,0 +1,10 @@
+<%- include("partials/header.ejs") %>
+
+<h1> <%= title %> </h1>
+
+<p style="text-align: center"> <%= content %> </p>
+<form action="/start" method="post" id="returnbutton">
+    <input type="submit" value="Return Home">
+</form>
+
+<%- include("partials/footer.ejs") %>

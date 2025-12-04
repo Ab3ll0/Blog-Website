@@ -1,11 +1,9 @@
 import express, {urlencoded} from 'express';
 import bodyParser from 'body-parser';
-import {dirname} from 'path';
-import {fileURLToPath} from 'url';
 
 const app = express();
 const port = 3000;
-const dirName = dirname(fileURLToPath(import.meta.url));
+const blogs =[];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -20,6 +18,27 @@ app.post('/submission', (req, res) => {
         Name: name,
     });
 });
+
+app.post('/start', (req, res) => {
+    res.render('index.ejs');
+});
+
+app.post('/newBlog', (req, res) => {
+        let tName = req.body["BlogName"];
+        let tCont = req.body["BlogContent"];
+        res.render('blog.ejs',{
+        title: tName,
+        content: tCont,
+    });
+        const newBlog = {
+            title: tName,
+            content: tCont,
+            id: blogs.length + 1};
+        blogs.push(newBlog);
+});
+
+
+
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
