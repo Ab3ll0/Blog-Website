@@ -5,21 +5,11 @@ body {
   color: hotpink;
 }
 
-main {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
+
 
 h1 {
-  font-size: 3.5rem;
+    font-size: 3.5rem;
+    text-align: center;
 }
 
 input {
@@ -33,7 +23,8 @@ input {
   cursor: pointer;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
+
+#MainB {
+    display: flex;
+    justify-content: center;
 }

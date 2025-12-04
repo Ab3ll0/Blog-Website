@@ -1,11 +1,12 @@
 <%- include("partials/header.ejs") %>
 
-<h1>Hello Ello, Please Give Us Your Blog Username 👓</h1>
 
+<h1>Hello Ello, Please Give Us Your Blog Username 👓</h1>
+<div id="MainB">
 <form action="/submission" method="POST">
     <label for="username">Username</label>
     <input type="text" id="username" name="usersname">
     <input type="submit" value="Submit">
 </form>
-
+</div>
 <%- include("partials/footer.ejs") %>
